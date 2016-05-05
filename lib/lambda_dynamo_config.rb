@@ -1,4 +1,5 @@
 require "lambda_dynamo_config/version"
+require "aws-sdk"
 
 module LambdaDynamoConfig
   class Table
