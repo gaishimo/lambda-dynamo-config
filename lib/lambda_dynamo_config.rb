@@ -16,12 +16,10 @@ module LambdaDynamoConfig
       client.create_table({
         table_name: @table_name,
         attribute_definitions: [
-          { attribute_name: 'function_name', attribute_type: 'S' },
-          { attribute_name: 'version', attribute_type: 'S' }
+          { attribute_name: 'function_name', attribute_type: 'S' }
         ],
         key_schema: [
-          { attribute_name: 'function_name', key_type: 'HASH' },
-          { attribute_name: 'version', key_type: 'RANGE' }
+          { attribute_name: 'function_name', key_type: 'HASH' }
         ],
         provisioned_throughput: {
           read_capacity_units: 1,
